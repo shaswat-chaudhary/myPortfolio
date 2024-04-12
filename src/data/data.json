@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Namaste (Social Media App)",
+        "description":
+            "Social media app, a web application that mimics the core features and functionalities of social media, allowing users of add friend, post upload, likes and comment on the post.",
+        "technologies": [
+            "React",
+            "Tailwind CSS",
+            "Node.js",
+            "Express.js",
+            "MongoDB"
+        ],
+        "image": "https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
+        "link": "https://namaste-sooty.vercel.app"
+
+    },
+    {
+
+        "id": 2,
+        "title": "Crypto Cap (Crypto Tracker)",
+        "description":
+            "Created a dynamic and responsive Crypto Tracker application using React.js and leveraged the Context API for efficient state management.",
+        "technologies": [
+            "React",
+            "Tailwind CSS",
+            "Figma"
+        ],
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHc_lpglOzjAPMwTIzUQmzHgw9niAA7CYXaiOiZZtCWA&s",
+        "link": "https://crypto-cap-three.vercel.app"
+
+    },
+    {
+
+        "id": 3,
+        "title": "Shopping Cart",
+        "description":
+            "Created a dynamic and responsive Crypto Tracker application using React.js and leveraged the Context API for efficient state management.",
+        "technologies": [
+            "React",
+            "Tailwind CSS",
+            "Figma",
+            "Redux"
+        ],
+        "image": "https://pbs.twimg.com/media/GF9EFadXMAAIVr_?format=jpg&name=large"
+
+    },
+    {
+
+        "id": 4,
+        "title": "Weather App",
+        "description":
+            "Created a dynamic and responsive Crypto Tracker application using React.js and leveraged the Context API for efficient state management.",
+        "technologies": [
+            "React",
+            "Tailwind CSS",
+            "Figma"
+        ],
+        "image": "https://www.bollywoodhungama.com/wp-content/uploads/2024/01/Pandya-Store-Priyanshi-Yadav-shares-her-620.jpg"
+
+    }
+]
