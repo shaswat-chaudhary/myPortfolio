@@ -14,9 +14,9 @@ export const Skills = () => {
         <div className='bg-black py-5'>
 
             <div className=''>
-                <div className='items-center flex flex-col gap-3 mx-3 text-center'>
+                <div className='items-center flex flex-col gap-3 mx-3 pb-3 text-center'>
                     <p className='bg-gray-700 w-fit px-5 py-0.5 rounded-full font-semibold'>Skills</p>
-                    <p className='text-base tracking-wider'>
+                    <p className='text-base tracking-wide py-1'>
                         {"The Skills, tools and technologies I am really good at"}
                     </p>
                 </div>
@@ -31,7 +31,7 @@ export const Skills = () => {
                     </div>
                     <div className='flex flex-col items-center text-center p-4'>
                         <h1 className='text-blue-700 flex justify-center'>
-                            <FaReact className='logo ' />
+                            <FaReact className='logo' />
                         </h1>
                         <p>React</p>
                     </div>

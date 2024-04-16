@@ -6,6 +6,9 @@ import projectData from '../data/data';
 import { Link } from 'react-router-dom';
 import { FiExternalLink } from "react-icons/fi";
 import { Footer } from '../components/Footer';
+import mobile1 from '../assets/namasteMobile1.png';
+import mobile2 from '../assets/namasteMobile2.png';
+import desktop from '../assets/namasteDesktop.png';
 
 export const Home = () => {
 
@@ -20,23 +23,30 @@ export const Home = () => {
 
 
     return (
-        <div className='h-screen overflow-auto'>
+        <div className=''>
             <Navbar />
             <Header />
             <Skills />
 
             <div className='py-5 flex flex-col gap-4'>
-                <div className='flex flex-col items-center text-start mx-2 md:mx-20 md:flex-row gap-2'>
-                    <div className='w-2/3'>
-                        <img className='w-full aspect-square object-cover' src={currentIndex?.image} alt='' />
+
+
+                <div className='flex flex-col sm:flex-row sm:mx-20 mx-3 justify-between gap-5 sm:gap-10'>
+
+                    <div className='w-full grow'>
+                        <img
+                            src={currentIndex?.image}
+                            className='w-full rounded-lg aspect-video object-cover'
+                            alt='' />
                     </div>
-                    <div className='flex flex-col gap-2  p-1'>
+
+                    <div className='flex flex-col gap-3 sm:px-12'>
 
                         <Link
                             to={currentIndex?.link}
-                            className='flex flex-1 gap-3 text-center items-center'>
+                            className='flex flex-row gap-3 sm:gap-5 items-center text-center'>
 
-                            <p className='text-xl font-medium'>
+                            <p className='sm:text-2xl text-xl font-medium'>
                                 {currentIndex?.title}
                             </p>
                             {
@@ -49,19 +59,16 @@ export const Home = () => {
 
                         <p className='font-normal text-base'>{currentIndex?.description}</p>
 
-                    <Link to={'/project'}>
-                        <button>
-                            See All Porjects
-                        </button>
-                    </Link>
+                        <Link to={'/project'} className='mt-7'>
+                            <button className='flex justify-center items-center grow w-32 sm:w-48 mb-6 sm:mb-0 text-sm sm:text-lg border border-indigo-200 hover:border-indigo-500 py-2 shadow-lg rounded-lg bg-indigo-100 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-600 hover:text-white duration-500'>
+                                More Projects
+                            </button>
+                        </Link>
                     </div>
-
                 </div>
             </div>
 
             <Footer />
-
-
 
         </div>
     )

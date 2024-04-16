@@ -1,8 +1,13 @@
 import React from 'react'
 import { Navbar } from '../components/Navbar'
+import { Footer } from '../components/Footer';
 import { MdEmail } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { CiLocationOn } from "react-icons/ci";
+import { IoCallOutline } from "react-icons/io5";
+import { MdOutlineEmail } from "react-icons/md";
+
 
 export const Contact = () => {
 
@@ -27,8 +32,8 @@ export const Contact = () => {
     <div>
       <Navbar />
 
-      <div>
-        <form className='w-auto overflow-hidden md:w-1/3 flex flex-col mx-2 md:mx-20 my-8 md:my-10 gap-2 rounded-lg'>
+      <div className='flex justify-between flex-col sm:flex-row sm:gap-10 gap-2  mx-3 sm:mx-20 py-8 md:my-10'>
+        <form className=' overflow-hidden grow flex flex-col gap-2 rounded-lg'>
 
           <label htmlFor='name'>Full Name</label>
           <input
@@ -62,35 +67,58 @@ export const Contact = () => {
 
           <button type='submit' className='my-5'>Send</button>
         </form>
-      </div>
 
+        <div className='flex flex-col grow gap-3 sm:gap-5'>
+          <p className='font-semibold text-3xl pb-4'>Contact Me</p>
 
+          <p className='font-medium text-xl'>
+            {'Shaswat Kumar Chaudhary'}
+          </p>
 
-      <div className='flex flex-row gap-12 md:gap-40 justify-center text-center mx-2 md:mx-20'>
+          <p className='flex items-center text-lg gap-3 sm:gap-5'>
+            <CiLocationOn />
+            <span className='font-medium text-base'>
+              {'Aurangabad, Bihar, India'}
+            </span>
+          </p>
 
-        <IoCall
-          size={50}
-          onClick={() => handleCall(number)}
-          className='text-blue-500'
-        />
-        <IoLogoWhatsapp
-          size={50}
-          onClick={() => handleWhatsapp(number)}
-          className='text-green-400'
-        />
+          <p className='flex items-center text-lg gap-3 sm:gap-5'>
+            <IoCallOutline />
+            <span className='font-medium text-base'>
+              {'+91 92625 75513'}
+            </span>
+            </p>
 
-        <MdEmail
-          size={50}
-          onClick={() => handleEmail(email)}
-          className='text-gray-500'
-        />
+          <p className='flex flex-row text-lg gap-3 sm:gap-5 items-center'>
+            <MdOutlineEmail/>
+            <span className='font-medium text-base pb-0.5'>
+              {'shaswatkumar281@gmail.com'}
+            </span>
+            </p>
 
-      </div>
+          <div className='flex flex-row text-start gap-10 sm:mt-20 pt-5'>
 
-      <div className='flex flex-row gap-14 md:gap-40 justify-center text-center mx-2 md:mx-20 text-sm p-2'>
-        <p>Call</p>
-        <p>Whatsapp</p>
-        <p>Email</p>
+            <IoCall
+              size={40}
+              onClick={() => handleCall(number)}
+              className='text-blue-500 cursor-pointer'
+            />
+
+            <IoLogoWhatsapp
+              size={40}
+              onClick={() => handleWhatsapp(number)}
+              className='text-green-500 cursor-pointer'
+            />
+
+            <MdEmail
+              size={40}
+              onClick={() => handleEmail(email)}
+              className='text-white cursor-pointer'
+            />
+          </div>
+
+        </div>
+
       </div>
 
     </div>
