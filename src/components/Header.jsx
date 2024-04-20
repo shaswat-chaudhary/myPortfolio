@@ -1,22 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import profilePic from '../assets/Frame 3762.png'
+import profileImg from '../assets/Snapchat-214351935-01.jpeg'
 import resume from '../assets/fullstack.pdf'
 import { FiArrowDownCircle } from 'react-icons/fi';
 import Typewriter from 'typewriter-effect';
 
+import { useSwipeable } from 'react-swipeable';
+
 export const Header = () => {
 
+  const [profileCard, setProfileCard] = useState(false);
+
+
+  const handlers = useSwipeable({
+    onSwipeStart: () => setProfileCard(true),
+    onSwiped: () => setProfileCard(false)
+  })
 
   return (
     <div className='w-full'>
 
-      <div className='md:mx-20 mx-3 flex md:flex-row-reverse flex-col justify-between text-start items-center py-8 sm:py-20 gap-8'>
+      <div className='md:mx-20 mx-3 flex md:flex-row-reverse flex-col justify-between text-start items-center sm:py-14 sm:my-16 py-4 mt-10 sm:mt gap-8'>
 
         <div className='flex items-center justify-center text-center sm:w-1/2'>
+
           <div className='sm:w-1/2 w-auto '>
-            <img className='w-full object-cover aspect-square rounded-full ring-1' src={profilePic} alt='profile' />
-            {/* 
-            <img className='rounded-full top-[124px] w-36 h-36 object-contain aspect-square ring-2 fixed' src={profileImg} alt='profile' /> */}
+
+            <div {...handlers} className={`flip-card ${profileCard ? 'flipped' : ''}`}>
+
+              <div className="flip-card-inner">
+
+                <div className="flip-card-front rounded-full">
+                  <img className='w-full ring-2 object-cover aspect-square rounded-full' src={'https://t4.ftcdn.net/jpg/05/90/45/35/360_F_590453560_ugMuPncnGYB6XnJqmC8xiPQx4eg3jmMD.jpg'} alt='profile' />
+                </div>
+
+                <div className="flip-card-back rounded-full items-center flex justify-center text-center">
+
+                  <img className='rounded-full object-cover aspect-square ring-2' src={profileImg} alt='profile' />
+                </div>
+
+              </div>
+            </div>
+
             <p className='font-medium'>{'Hey !'}</p>
           </div>
         </div>
@@ -39,7 +64,7 @@ export const Header = () => {
           </div>
 
 
-          <p className=''>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum esse, ad a mollitia, consectetur, veniam aliquid illo necessitatibus amet velit accusamus? Optio voluptatum laudantium neque dolorem qui corrupti expedita sint.</p>
+          <p className=''>Full Stack Developer with a proven track record in expert-level Front-End Development. Proficient in designing and implementing innovative user interfaces and experiences using cutting-edge technologies and best practices.</p>
 
           <a
             download={"download.pdf"}
@@ -56,6 +81,9 @@ export const Header = () => {
         </div>
 
       </div>
+
+
+
 
     </div>
   )

@@ -3,6 +3,7 @@ import { Navbar } from '../components/Navbar'
 import projectData from '../data/data';
 import { FiExternalLink } from "react-icons/fi";
 import { Link } from 'react-router-dom';
+import {Footer} from '../components/Footer';
 
 
 export const Projects = () => {
@@ -12,12 +13,12 @@ export const Projects = () => {
     <div>
       <Navbar />
 
-      <div className='mx-3 sm:mx-20'>
+      <div className='mx-3 sm:mx-20 mb-5'>
 
         {
           projectData.map((item) => (
             <div key={item?.id} item={item}
-              className='flex flex-col sm:flex-row w-full items-center mt-5 gap-10 '>
+              className='flex flex-col sm:flex-row w-full items-center mt-5 sm:gap-10 gap-4 pb-4 '>
 
               <div className='sm:w-1/2 w-full sm:p-5'>
                 <img className='w-full aspect-video object-cover rounded-lg'
@@ -25,7 +26,7 @@ export const Projects = () => {
                   alt='' />
               </div>
 
-              <div className='px-1 py-3 gap-2 flex flex-col sm:w-1/2'>
+              <div className='px-1 gap-2 flex flex-col sm:w-1/2'>
                 <Link to={item?.link}
                   className='flex flex-row text-center items-center gap-4'>
                   <p className='text-xl sm:text-2xl font-medium cursor-pointer'>
@@ -54,6 +55,8 @@ export const Projects = () => {
           ))
         }
       </div>
+
+      <Footer />
 
     </div>
   )

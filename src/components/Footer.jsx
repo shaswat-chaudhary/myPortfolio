@@ -17,7 +17,7 @@ export const Footer = () => {
       </div>
 
 
-      <div className='pb-5 pt-1'>
+      <div className='pb-3 pt-1'>
         <p className='border-t py-1 font-normal text-sm sm:text-lg text-center text-[#808080]'>2024 Portfolio. All rights reserved</p>
       </div>
 
