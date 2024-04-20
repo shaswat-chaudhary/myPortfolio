@@ -6,9 +6,7 @@ import projectData from '../data/data';
 import { Link } from 'react-router-dom';
 import { FiExternalLink } from "react-icons/fi";
 import { Footer } from '../components/Footer';
-import mobile1 from '../assets/namasteMobile1.png';
-import mobile2 from '../assets/namasteMobile2.png';
-import desktop from '../assets/namasteDesktop.png';
+
 
 export const Home = () => {
 

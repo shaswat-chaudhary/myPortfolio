@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import profilePic from '../assets/Frame 3762.png'
 import profileImg from '../assets/Snapchat-214351935-01.jpeg'
 import resume from '../assets/fullstack.pdf'
 import { FiArrowDownCircle } from 'react-icons/fi';
