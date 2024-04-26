@@ -1,11 +1,36 @@
 import React, { useState } from 'react'
+import profileImg from '../assets/Snapchat-214351935-01.jpeg'
 import resume from '../assets/fullstack.pdf'
 import { FiArrowDownCircle } from 'react-icons/fi';
 import Typewriter from 'typewriter-effect';
-import { ProfileCard } from './ProfileCard';
+
 
 export const Header = () => {
 
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [startX, setStartX] = useState(null);
+
+  const handleTouchStart = (e) => {
+    const touch = e.touches[0];
+    setStartX(touch.clientX);
+  }
+
+  const handleTouchMove = (e) => {
+
+  }
+
+  const handleTouchEnd = (e) => {
+    const touch = e.changedTouches[0]
+    const endX = touch.clientX;
+
+    const deltaX = endX - startX;
+
+    if (Math.abs(deltaX) > 50) {
+      setIsFlipped(!isFlipped);
+    }
+
+    setStartX(null)
+  }
 
 
   return (
@@ -16,7 +41,29 @@ export const Header = () => {
         <div className='flex items-center justify-center text-center sm:w-1/2'>
 
           <div className='sm:w-1/2 w-auto '>
-            <ProfileCard />
+
+            <div className={`flip-card ${isFlipped ? 'flipped' : ''}`}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+
+              <div className="flip-card-inner">
+
+                <div className="flip-card-front rounded-full">
+                  <img className='w-full ring-2 object-cover aspect-square rounded-full'
+                    src={'https://t4.ftcdn.net/jpg/05/90/45/35/360_F_590453560_ugMuPncnGYB6XnJqmC8xiPQx4eg3jmMD.jpg'}
+                    alt='profile' />
+                </div>
+
+                <div className="flip-card-back rounded-full items-center flex justify-center text-center">
+
+                  <img className='rounded-full object-cover aspect-square ring-2'
+                    src={profileImg} alt='profile' />
+                </div>
+
+              </div>
+            </div>
 
             <p className='font-medium'>{'Hey !'}</p>
           </div>
