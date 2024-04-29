@@ -1,15 +1,13 @@
-[
-    {
-        "fullName": "Shaswat Kumar Chaudhary",
-        "father's Name": "Vishwanath Chauhdary",
-        "mother's Name": "Nirmala Chauhdary",
-        "mobile no": "+91 92625 75513",
-        "email": "shaswatkumar281@gmail.com",
-        "address": "Aurangabad, Bihar, India",
-        "profession": "Full Stack Developer",
-        "about": "Full Stack Developer with a proven track record in expert-level Front-End Development. Proficient in designing and implementing innovative user interfaces and experiences using cutting-edge technologies and best practices.",
-        "education": "Babu Banarsi Das University, Lucknow",
-        "profileUrl": "https://media.licdn.com/dms/image/D5603AQEiTSn7Ck4acQ/profile-displayphoto-shrink_200_200/0/1704303931770?e=2147483647&v=beta&t=e9k7903asxlDu_u4LWeJvY7gDxywGdjg5oNUfXlyb2s",
-        "profileUrl_1": "https://t4.ftcdn.net/jpg/05/90/45/35/360_F_590453560_ugMuPncnGYB6XnJqmC8xiPQx4eg3jmMD.jpg"
-    }
-]
+{
+    "fullName": "Shaswat Kumar Chaudhary",
+    "father's Name": "Vishwanath Chauhdary",
+    "mother's Name": "Nirmala Chauhdary",
+    "mobile": "+91 92625 75513",
+    "email": "shaswatkumar281@gmail.com",
+    "address": "Aurangabad, Bihar, India",
+    "profession": "Full Stack Developer",
+    "about": "Full Stack Developer with a proven track record in expert-level Front-End Development. Proficient in designing and implementing innovative user interfaces and experiences using cutting-edge technologies and best practices.",
+    "education": "Babu Banarsi Das University, Lucknow",
+    "profileUrl": "https://media.licdn.com/dms/image/D5603AQEiTSn7Ck4acQ/profile-displayphoto-shrink_200_200/0/1704303931770?e=2147483647&v=beta&t=e9k7903asxlDu_u4LWeJvY7gDxywGdjg5oNUfXlyb2s",
+    "profileUrl_1": "https://t4.ftcdn.net/jpg/05/90/45/35/360_F_590453560_ugMuPncnGYB6XnJqmC8xiPQx4eg3jmMD.jpg"
+}

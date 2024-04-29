@@ -3,6 +3,7 @@ import profileImg from '../assets/Snapchat-214351935-01.jpeg'
 import resume from '../assets/fullstack.pdf'
 import { FiArrowDownCircle } from 'react-icons/fi';
 import Typewriter from 'typewriter-effect';
+import data from '../data/mydata.json';
 
 
 export const Header = () => {
@@ -26,6 +27,7 @@ export const Header = () => {
     const deltaX = endX - startX;
 
     if (Math.abs(deltaX) > 50) {
+      //Swipe right
       setIsFlipped(!isFlipped);
     }
 
@@ -81,13 +83,15 @@ export const Header = () => {
                 ],
                 autoStart: true,
                 loop: true,
-                deleteSpeed: 50,
+                deleteSpeed: 100,
               }}
             />
           </div>
 
 
-          <p className=''>Full Stack Developer with a proven track record in expert-level Front-End Development. Proficient in designing and implementing innovative user interfaces and experiences using cutting-edge technologies and best practices.</p>
+          <p className='text-base font-medium'>
+            {data?.about}
+          </p>
 
           <a
             download={"download.pdf"}
@@ -95,7 +99,8 @@ export const Header = () => {
             aria-label='download resume'
             className="flex justify-center items-center grow w-40 sm:w-48 mt-5 sm:mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 hover:border-indigo-500 py-3 shadow-lg rounded-lg bg-indigo-100 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-600 hover:text-white duration-500"
           >
-            <FiArrowDownCircle className="mr-2 sm:mr-3 h-5 w-5 sm:w-6 sm:h-6 duration-100" />
+            <FiArrowDownCircle
+              className="mr-2 sm:mr-3 h-5 w-5 sm:w-6 sm:h-6 duration-100" />
             <span className="text-sm sm:text-lg duration-100">
               Download CV
             </span>
