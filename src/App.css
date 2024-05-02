@@ -1,13 +1,19 @@
 .logo {
   transition: filter 300ms;
   cursor: pointer;
-  color: #b94edf;
   animation: spin 5s linear infinite;
 
 }
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #ffffffaa);
+}
+
+.bright{
+  transition: filter 300ms;
+}
+.bright:hover {
+  filter: drop-shadow(0 0 2em #8dbef3);
 }
 
 .logo.react:hover {

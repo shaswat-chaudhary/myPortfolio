@@ -4,6 +4,10 @@ import resume from '../assets/fullstack.pdf'
 import { FiArrowDownCircle } from 'react-icons/fi';
 import Typewriter from 'typewriter-effect';
 import data from '../data/mydata.json';
+import { IoLogoJavascript } from "react-icons/io";
+import { FaNodeJs, FaReact, FaGithub} from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
+
 
 
 export const Header = () => {
@@ -38,9 +42,9 @@ export const Header = () => {
   return (
     <div className='w-full'>
 
-      <div className='md:mx-20 mx-3 flex md:flex-row-reverse flex-col justify-between text-start items-center sm:py-14 sm:my-16 py-4 mt-10 sm:mt gap-8'>
+      <div className='md:mx-20 mx-3 flex md:flex-row-reverse flex-col justify-between text-start items-center sm:py-14 sm:my-16 py-4 mt-10 sm:mt gap-8 relative'>
 
-        <div className='flex items-center justify-center text-center sm:w-1/2'>
+        <div className='flex items-center justify-center text-center sm:w-1/2 '>
 
           <div className='sm:w-1/2 w-auto '>
 
@@ -49,6 +53,7 @@ export const Header = () => {
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
+
 
               <div className="flip-card-inner">
 
@@ -89,7 +94,7 @@ export const Header = () => {
           </div>
 
 
-          <p className='text-base font-medium'>
+          <p className='text-lg font-medium'>
             {data?.about}
           </p>
 
@@ -100,7 +105,7 @@ export const Header = () => {
             className="flex justify-center items-center grow w-40 sm:w-48 mt-5 sm:mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 hover:border-indigo-500 py-3 shadow-lg rounded-lg bg-indigo-100 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-600 hover:text-white duration-500"
           >
             <FiArrowDownCircle
-              className="mr-2 sm:mr-3 h-5 w-5 sm:w-6 sm:h-6 duration-100" />
+              className="mr-2 sm:mr-3 h-5 w-5 sm:w-6 sm:h-6 duration-100 animate-bounce" />
             <span className="text-sm sm:text-lg duration-100">
               Download CV
             </span>

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { IoLogoWhatsapp } from "react-icons/io";
+import { IoChatbubbleEllipses } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { LuSend } from "react-icons/lu";
 
@@ -26,7 +26,6 @@ export const ChatBox = () => {
     })
 
     const handleClickOpen = () => {
-
         setChatBox(true);
     }
 
@@ -38,7 +37,7 @@ export const ChatBox = () => {
         <div className='bg-red-400' ref={menuRef}>
             {
                 isChatBox && (
-                    <div className='w-5/6 sm:w-1/3 rounded-lg h-[65vh] bg-blue-200 fixed bottom-20 right-4 shadow-lg'>
+                    <div className='w-5/6 sm:w-1/3 rounded-lg h-[65vh] bg-blue-200 fixed bottom-5 right-5 shadow-lg z-20'>
 
                         <div className='flex  justify-between text-center items-center bg-blue-400 p-1 rounded-lg'>
 
@@ -75,27 +74,17 @@ export const ChatBox = () => {
                 )
             }
 
-            <div className='fixed right-4 bottom-4 cursor-pointer'>
-                {
-                    isChatBox ? (
-                        <div className='p-3 rounded-full bg-blue-400'
-                            onClick={handleClickClose}>
-                            <IoClose
-                                size={35}
-                                color='black' />
-                        </div>
-                    ) : (
-                        <div className='p-3 bg-blue-400 rounded-full'
-                            onClick={handleClickOpen}>
-                            <IoLogoWhatsapp
-                                size={35}
-                                color={'green'} />
-                        </div>
-                    )
-                }
-            </div>
-
-
+            {
+                !isChatBox && (
+                    <div className='p-3 bg-[#8dbef3] rounded-full fixed right-5 bottom-5 cursor-pointer'
+                        onClick={handleClickOpen}>
+                        <IoChatbubbleEllipses
+                            size={35}
+                            color={'blue'}
+                        />
+                    </div>
+                )
+            }
         </div>
     )
 }

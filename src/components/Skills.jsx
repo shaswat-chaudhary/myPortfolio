@@ -11,70 +11,70 @@ import { TbBrandVscode } from "react-icons/tb";
 
 export const Skills = () => {
     return (
-        <div className='bg-black py-5'>
+        <div className='bg-slate-900 py-6'>
 
             <div className=''>
-                <div className='items-center flex flex-col gap-3 mx-3 pb-3 text-center'>
-                    <p className='bg-gray-700 w-fit px-5 py-0.5 rounded-full font-semibold'>Skills</p>
-                    <p className='text-base tracking-wide py-1'>
-                        {"The Skills, tools and technologies I am really good at"}
+                <div className='items-center flex flex-col gap-2 pb-6 mx-3 text-center'>
+                    <p className='bg-gray-800 w-fit px-5 py-0.5 rounded-full font-semibold'>Skills</p>
+                    <p className='text-lg tracking-wider font-'>
+                        He Skills, tools and technologies I am really good at
                     </p>
                 </div>
 
-                <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 md:gap-10 gap-2 mx-auto items-center'>
+                <div className='mx-5 sm:mx-20 grid grid-cols-2 gap-6 md:gap-16 sm:grid-cols-3 md:grid-cols-4 items-center justify-between'>
 
-                    <div className='flex flex-col items-center text-center p-4'>
-                        <h1 className='text-yellow-300 justify-center flex'>
-                            <IoLogoJavascript />
+                    <div className='bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
+                        <h1 className='text-yellow-300 flex justify-center'>
+                            <IoLogoJavascript className='bright'/>
                         </h1>
-                        <p>JavaScript</p>
+                        <p> JavaScript</p>
                     </div>
-                    <div className='flex flex-col items-center text-center p-4'>
-                        <h1 className='text-blue-700 flex justify-center'>
+                    <div className='bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
+                        <h1 className='text-blue-500 flex justify-center'>
                             <FaReact className='logo' />
                         </h1>
                         <p>React</p>
                     </div>
-                    <div className='flex flex-col items-center text-center p-4'>
+                    <div className=' bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className=' text-green-500 flex justify-center'>
-                            <FaNodeJs />
+                            <FaNodeJs className='bright'/>
                         </h1>
                         <p>Node.js</p>
                     </div>
-                    <div className='flex flex-col items-center text-center p-4'>
+                    <div className=' bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className='flex justify-center'>
-                            <SiExpress />
+                            <SiExpress className='bright'/>
                         </h1>
                         <p>Express.js</p>
                     </div>
-                    <div className='flex flex-col items-center text-center p-4'>
-                        <h1 className=' text-green-900 flex justify-center'>
-                            <SiMongodb />
+                    <div className=' bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
+                        <h1 className=' text-green-800 flex justify-center'>
+                            <SiMongodb className='bright'/>
                         </h1>
                         <p>MongoDB</p>
                     </div>
-                    <div className='flex flex-col items-center text-center p-4'>
+                    <div className='bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className=' text-blue-500 flex justify-center'>
-                            <SiTailwindcss />
+                            <SiTailwindcss className='bright'/>
                         </h1>
                         <p>Tailwind</p>
                     </div>
-                    <div className='flex flex-col items-center text-center p-4'>
+                    <div className='bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className='flex justify-center'>
-                            <FaFigma />
+                            <FaFigma className='bright'/>
                         </h1>
                         <p>Figma</p>
                     </div>
-                    <div className='flex flex-col items-center text-center p-4'>
+                    <div className=' bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className='flex justify-center'>
-                            <FaGithubSquare />
+                            <FaGithubSquare className='bright'/>
 
                         </h1>
                         <p>Github</p>
                     </div>
-                    <div className='flex flex-col items-center text-center p-4'>
+                    <div className=' bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className='text-sky-600 flex justify-center'>
-                            <TbBrandVscode />
+                            <TbBrandVscode className='bright'/>
                         </h1>
                         <p>VS Code</p>
                     </div>
