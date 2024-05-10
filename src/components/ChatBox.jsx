@@ -37,7 +37,7 @@ export const ChatBox = () => {
         <div className='bg-red-400' ref={menuRef}>
             {
                 isChatBox && (
-                    <div className='w-5/6 sm:w-1/3 rounded-lg h-[65vh] bg-blue-200 fixed bottom-5 right-5 shadow-lg z-20'>
+                    <div className='w-5/6 sm:w-1/3 rounded-lg h-[65vh] bg-blue-200 fixed bottom-5 right-5 shadow-lg z-30'>
 
                         <div className='flex  justify-between text-center items-center bg-blue-400 p-1 rounded-lg'>
 

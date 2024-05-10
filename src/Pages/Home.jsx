@@ -26,7 +26,6 @@ export const Home = () => {
             <Navbar />
             <Header />
             <Skills />
-
             <ChatBox />
 
             <div className='py-5 flex flex-col gap-4 items-center'>
@@ -34,21 +33,22 @@ export const Home = () => {
                 <p className='bg-gray-700 w-fit px-5 py-0.5 text-base rounded-full font-semibold'>
                     {'Work'}
                 </p>
-                <div className='flex flex-col sm:flex-row sm:mx-20 mx-3 justify-between gap-5 sm:gap-10'>
+
+                <div className='flex flex-col sm:flex-row sm:mx-20 mx-3 justify-between gap-5 sm:gap-10 ring-1 rounded-lg pb-4 sm:pb-0 bg-slate-900'>
 
 
                     <div className='w-full grow'>
                         <img
                             src={currentIndex?.image}
-                            className='w-full rounded-lg aspect-video object-cover'
+                            className='w-full rounded-tl-lg sm:rounded-bl-lg sm:rounded-tr-none rounded-tr-lg aspect-video object-cover'
                             alt='' />
                     </div>
 
-                    <div className='flex flex-col gap-3 sm:gap-8 sm:px-12 '>
+                    <div className='flex flex-col gap-3 sm:gap-6 sm:py-10 sm:px-12 mx-2 '>
 
                         <Link
                             to={currentIndex?.link}
-                            className='flex flex-row gap-3 sm:gap-5 items-center text-center'>
+                            className='flex flex-row gap-3 sm:gap-5 items-center text-center text-blue-500'>
 
                             <p className='sm:text-2xl text-xl font-medium'>
                                 {currentIndex?.title}

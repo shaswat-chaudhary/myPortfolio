@@ -72,7 +72,7 @@ export const Header = () => {
               </div>
             </div>
 
-            <p className='font-medium'>{'Hey !'}</p>
+            <p className='font-medium py-2 text-lg dark:text-white text-black font-serif'>{'Hey !'}</p>
           </div>
         </div>
 
@@ -80,7 +80,6 @@ export const Header = () => {
 
           <div className='h-40 sm:h-20'>
             <Typewriter
-              className="text-red-400"
               options={{
                 strings: [
                   "I'm Full Stack Developer",
@@ -94,7 +93,7 @@ export const Header = () => {
           </div>
 
 
-          <p className='text-lg font-medium'>
+          <p className='text-lg font-medium font-serif'>
             {data?.about}
           </p>
 

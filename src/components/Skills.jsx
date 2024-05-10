@@ -21,7 +21,7 @@ export const Skills = () => {
                     </p>
                 </div>
 
-                <div className='mx-5 sm:mx-20 grid grid-cols-2 gap-6 md:gap-16 sm:grid-cols-3 md:grid-cols-4 items-center justify-between'>
+                <div className='mx-5 sm:mx-20 grid grid-cols-2 gap-6 md:gap-16 sm:grid-cols-3 md:grid-cols-4 items-center justify-between text-white'>
 
                     <div className='bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className='text-yellow-300 flex justify-center'>
@@ -43,7 +43,7 @@ export const Skills = () => {
                     </div>
                     <div className=' bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className='flex justify-center'>
-                            <SiExpress className='bright'/>
+                            <SiExpress className='bright text-white'/>
                         </h1>
                         <p>Express.js</p>
                     </div>
@@ -61,20 +61,20 @@ export const Skills = () => {
                     </div>
                     <div className='bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className='flex justify-center'>
-                            <FaFigma className='bright'/>
+                            <FaFigma className='bright text-white'/>
                         </h1>
                         <p>Figma</p>
                     </div>
                     <div className=' bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className='flex justify-center'>
-                            <FaGithubSquare className='bright'/>
+                            <FaGithubSquare className='bright text-white'/>
 
                         </h1>
                         <p>Github</p>
                     </div>
                     <div className=' bg-slate-800 py-6 gap-2 rounded-lg shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
-                        <h1 className='text-sky-600 flex justify-center'>
-                            <TbBrandVscode className='bright'/>
+                        <h1 className='flex justify-center'>
+                            <TbBrandVscode className='bright text-blue-500'/>
                         </h1>
                         <p>VS Code</p>
                     </div>

@@ -53,24 +53,6 @@ export const Contact = () => {
   }
 
 
-
-  const number = +919262575513;
-  const isEmail = 'imshaswatkumar@gmail.com'
-
-  const handleCall = (number) => {
-    window.location.href = `tel:${number}`
-  }
-
-  const handleWhatsapp = (number) => {
-
-    window.open(`https://wa.me/${number}`);
-  }
-
-  const handleEmail = (isEmail) => {
-    window.open(`https://mailto:${isEmail}`)
-  }
-
-
   return (
     <div>
       <Navbar />
@@ -133,7 +115,7 @@ export const Contact = () => {
         <div className='bg-slate-950 h-[1px]'></div>
 
         <div className='flex flex-col grow gap-3 sm:gap-5'>
-          <p className='font-semibold text-2xl py-4 font-serif'>Contact me</p>
+          <p className='font-semibold text-2xl py-4 font-serif text-cyan-300'>Contact me</p>
 
           <p className='font-medium text-xl'>
             {data?.fullName}
@@ -160,28 +142,7 @@ export const Contact = () => {
             </span>
           </p>
 
-          <div className='flex flex-row text-start gap-10 sm:mt-20 pt-5'>
-
-            <IoCall
-              size={40}
-              onClick={() => handleCall(number)}
-              className='text-blue-500 cursor-pointer'
-            />
-
-            <IoLogoWhatsapp
-              size={40}
-              onClick={() => handleWhatsapp(number)}
-              className='text-green-500 cursor-pointer'
-            />
-
-            <MdEmail
-              size={40}
-              onClick={() => handleEmail(isEmail
-              )}
-              className='text-white cursor-pointer'
-            />
-          </div>
-
+         
         </div>
 
       </div>

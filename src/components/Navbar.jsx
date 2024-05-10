@@ -90,13 +90,13 @@ export const Navbar = () => {
                                 <IoClose
                                     size={35}
                                     onClick={handleClick}
-                                    className='hover:rotate-45 transition-all z-30 cursor-pointer' />
+                                    className='hover:rotate-45 transition-all z-30 cursor-pointer text-white' />
                             ) : (
 
                                 <CgMenuRightAlt
                                     size={35}
                                     onClick={handleClick}
-                                    className='md:hidden flex cursor-pointer' />
+                                    className='md:hidden flex cursor-pointer text-white' />
                             )
                         }
                     </div>
