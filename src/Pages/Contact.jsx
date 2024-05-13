@@ -57,7 +57,7 @@ export const Contact = () => {
     <div>
       <Navbar />
 
-      <div className='flex justify-between flex-col sm:flex-row sm:gap-10 gap-2  mx-3 sm:mx-20 py-8 md:my-10'>
+      <div className='flex justify-between flex-col sm:flex-row sm:gap-10 gap-2 px-5 sm:px-[8vw] pt-8 md:mt-10 pb-4'>
 
         <form onSubmit={handleSubmit} className=' overflow-hidden grow flex flex-col gap-2 rounded-lg'>
 
@@ -146,6 +146,8 @@ export const Contact = () => {
         </div>
 
       </div>
+
+      <Footer />
 
     </div>
   )

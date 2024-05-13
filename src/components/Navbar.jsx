@@ -4,34 +4,32 @@ import { IoClose } from "react-icons/io5";
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import logo from '../assets/shaswat-logo-2.png'
+import { Home } from '../Pages/Home';
 
 export const Navbar = () => {
 
     const [ismenu, setIsMenu] = useState(false);
     const [navColor, setNavColor] = useState(false);
-    let menuRef = useRef();
+    // let menuRef = useRef();
 
-    const handleClickOutside = (e) => {
-        if (menuRef.current && !menuRef.current.contains(e.target)) {
-            setIsMenu(false);
-        }
-    };
+    // const handleClickOutside = (e) => {
+    //     if (menuRef.current && !menuRef.current.contains(e.target)) {
+    //         setIsMenu(false);
+    //     }
+    // };
 
-    useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutside);
+    // useEffect(() => {
+    //     document.addEventListener('mousedown', handleClickOutside);
 
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
+    //     return () => {
+    //         document.removeEventListener('mousedown', handleClickOutside);
+    //     };
+    // }, []);
 
     const location = useLocation();
 
     const [currentPage, setCurrentPage] = useState(location.pathname);
 
-    const handleClick = () => {
-        setIsMenu(!ismenu);
-    }
 
     const scrollHandler = () => {
         if (window.scrollY >= 20) {
@@ -45,13 +43,15 @@ export const Navbar = () => {
         window.addEventListener("scroll", scrollHandler);
     })
 
+
+
     return (
         <>
             <div className={navColor ? 'bg-black sticky top-0 duration-300 transition-all ease-in-out z-50 shadow-lg shadow-cyan-400/20' : ''} >
 
-                <div className='sm:mx-20 mx-3 pt-1' ref={menuRef}>
+                <div className='sm:px-[8vw] px-5 py--1'>
 
-                    <div className='flex text-center items-center w-full justify-between py-1 sm:py-2'>
+                    <div className='flex text-center items-center w-full justify-between py-1 sm:py-2 '>
                         <Link to={'/'} className='sm:w-28 w-24'>
                             <img src={logo} alt='' className='font-bold brightness-125' />
                         </Link>
@@ -65,7 +65,7 @@ export const Navbar = () => {
                             </Link>
 
                             <Link to={'/project'}
-                                className={currentPage === '/project' ? "active" : "nav"}
+                                className={currentPage === '' ? "active" : "nav"}
                             >
                                 Project
                             </Link>
@@ -77,15 +77,36 @@ export const Navbar = () => {
                             </Link>
 
                             <Link to={'/contact'}
-                                className={currentPage === '/contact' ? "active" : "nav"}
+                                className={currentPage === '/skill' ? "active" : "nav"}
                             >
-                                Contact
+                                Skills
                             </Link>
 
                         </div>
 
-                        <button className='hidden sm:flex'>Hire me</button>
+
                         {
+                            currentPage === '/' ? (
+                                <Link to={'/contact'}>
+                                    <button
+                                        className="flex sm:px-4 px-3 py-2 my-1 sm:my-0 rounded-lg text-center justify-center items-center grow sm:text-lg text-sm border font-normal border-indigo-200 hover:border-indigo-500 shadow-lg  bg-indigo-100 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-600 hover:text-white duration-500"
+                                    >
+                                        Contact me
+                                    </button>
+                                </Link>
+                            ) : (
+                                <Link to={'/'}>
+                                    <button
+                                        className="flex sm:px-4 px-3 py-2 my-1 sm:my-0 rounded-lg text-center justify-center items-center grow sm:text-lg text-sm border font-normal border-indigo-200 hover:border-indigo-500 shadow-lg  bg-indigo-100 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-600 hover:text-white duration-500">
+                                        Home
+                                    </button>
+                                </Link>
+                            )
+                        }
+
+                  </div>
+
+                        {/* {
                             ismenu ? (
                                 <IoClose
                                     size={35}
@@ -98,10 +119,8 @@ export const Navbar = () => {
                                     onClick={handleClick}
                                     className='md:hidden flex cursor-pointer text-white' />
                             )
-                        }
-                    </div>
-
-                    {
+                        } */}
+                    {/* {
                         ismenu && (
 
                             <div className='bg-slate-600 w-3/4 fixed right-2 opacity-100 top-14 rounded-2xl p-4 h-[50vh] flex flex-col justify-between py-5 z-50 text-white font-semibold shadow-lg'>
@@ -139,7 +158,7 @@ export const Navbar = () => {
 
                             </div>
                         )
-                    }
+                    } */}
                 </div>
 
             </div>

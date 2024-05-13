@@ -5,8 +5,10 @@ import { FiArrowDownCircle } from 'react-icons/fi';
 import Typewriter from 'typewriter-effect';
 import data from '../data/mydata.json';
 import { IoLogoJavascript } from "react-icons/io";
-import { FaNodeJs, FaReact, FaGithub} from "react-icons/fa";
+import { FaNodeJs, FaReact, FaGithub } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
+import { IoIosCall, IoLogoWhatsapp } from "react-icons/io";
+import { IoCall } from 'react-icons/io5';
 
 
 
@@ -38,11 +40,17 @@ export const Header = () => {
     setStartX(null)
   }
 
+  const number = +919262575513;
+
+  const handleCall = (number) => {
+    window.location.href = `tel:${number}`
+  }
+
 
   return (
     <div className='w-full'>
 
-      <div className='md:mx-20 mx-3 flex md:flex-row-reverse flex-col justify-between text-start items-center sm:py-14 sm:my-16 py-4 mt-10 sm:mt gap-8 relative'>
+      <div className='sm:px-[8vw] px-6 flex md:flex-row-reverse flex-col justify-between text-start items-center sm:py-16 py-4 mt-10 sm:mt gap-8 relative'>
 
         <div className='flex items-center justify-center text-center sm:w-1/2 '>
 
@@ -78,7 +86,7 @@ export const Header = () => {
 
         <div className='flex flex-col gap-4 sm:w-1/2'>
 
-          <div className='h-40 sm:h-20'>
+          <div className='h-40 sm:h-32'>
             <Typewriter
               options={{
                 strings: [
@@ -93,22 +101,35 @@ export const Header = () => {
           </div>
 
 
-          <p className='text-lg font-medium font-serif'>
+          <p className='text-lg font-thin'>
             {data?.about}
           </p>
 
-          <a
-            download={"download.pdf"}
-            href={resume}
-            aria-label='download resume'
-            className="flex justify-center items-center grow w-40 sm:w-48 mt-5 sm:mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 hover:border-indigo-500 py-3 shadow-lg rounded-lg bg-indigo-100 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-600 hover:text-white duration-500"
-          >
-            <FiArrowDownCircle
-              className="mr-2 sm:mr-3 h-5 w-5 sm:w-6 sm:h-6 duration-100 animate-bounce" />
-            <span className="text-sm sm:text-lg duration-100">
-              Download CV
-            </span>
-          </a>
+          <div className='flex w-fit flex-row gap-12 items-center mt-5 sm:mt-12 mb-6 sm:mb-0'>
+
+            <a
+              download={"download.pdf"}
+              href={resume}
+              aria-label='download resume'
+              className="flex justify-center items-center grow w-40 sm:w-48 text-lg border border-indigo-200 hover:border-indigo-500 py-3 shadow-lg rounded-lg bg-indigo-100 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-600 hover:text-white duration-500"
+            >
+              <FiArrowDownCircle
+                className="mr-2 sm:mr-3 h-5 w-5 sm:w-6 sm:h-6 duration-100 animate-bounce" />
+              <span className="text-sm sm:text-lg duration-100">
+                Download CV
+              </span>
+            </a>
+
+
+            <div
+              onClick={() => handleCall(number)}
+              className='sm:w-12 sm:h-12 w-10 h-10 ring-1 flex items-center justify-center rounded-full cursor-pointer'>
+              <IoIosCall size={25} />
+            </div>
+
+          </div>
+
+
 
         </div>
 
