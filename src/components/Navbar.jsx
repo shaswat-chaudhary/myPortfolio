@@ -4,7 +4,6 @@ import { IoClose } from "react-icons/io5";
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import logo from '../assets/shaswat-logo-2.png'
-import { Home } from '../Pages/Home';
 
 export const Navbar = () => {
 
@@ -47,7 +46,7 @@ export const Navbar = () => {
 
     return (
         <>
-            <div className={navColor ? 'bg-black sticky top-0 duration-300 transition-all ease-in-out z-50 shadow-lg shadow-cyan-400/20' : ''} >
+            <div className={navColor ? 'bg-black sticky top-0 duration-200  z-50 shadow-lg shadow-cyan-400/20' : ''} >
 
                 <div className='sm:px-[8vw] px-5 py--1'>
 
@@ -64,19 +63,19 @@ export const Navbar = () => {
                                 Home
                             </Link>
 
-                            <Link to={'/project'}
+                            <Link to={''}
                                 className={currentPage === '' ? "active" : "nav"}
                             >
                                 Project
                             </Link>
 
-                            <Link to={'/about'}
+                            <Link to={''}
                                 className={currentPage === '/about' ? "active" : "nav"}
                             >
                                 About
                             </Link>
 
-                            <Link to={'/contact'}
+                            <Link to={''}
                                 className={currentPage === '/skill' ? "active" : "nav"}
                             >
                                 Skills

@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
-import { Navbar } from '../components/Navbar'
 import projectData from '../data/data';
 import { FiExternalLink } from "react-icons/fi";
 import { Link } from 'react-router-dom';
-import { Footer } from '../components/Footer';
 
 
 export const Projects = () => {
-
 
   return (
     <div>
@@ -34,7 +31,7 @@ export const Projects = () => {
 
                 {/* Description */}
 
-                <div className='px-4 sm:py-4 gap-2 sm:gap-4 flex flex-col'>
+                <div className='px-4 py-3 gap-2 sm:gap-4 flex flex-col'>
                   <Link to={item?.link}
                     className='flex flex-row text-center items-center gap-4 text-blue-400 hover:text-gray-300 duration-200'>
                     <p className='text-xl sm:text-2xl font-medium'>

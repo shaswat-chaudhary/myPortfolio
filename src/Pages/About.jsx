@@ -1,14 +1,6 @@
 import React from 'react';
-import { Navbar } from '../components/Navbar';
 import data from '../data/mydata.json';
 import image from '../assets/IMG20230525222423-01.jpeg';
-import resume from '../assets/fullstack.pdf';
-import { FiArrowDownCircle } from 'react-icons/fi';
-import { IoIosCall } from "react-icons/io";
-import { IoLogoWhatsapp } from 'react-icons/io5';
-import { MdEmail } from 'react-icons/md';
-import { FaInstagram } from "react-icons/fa";
-import { Link } from 'react-router-dom';
 import { SocialMedia } from '../components/SocialMedia';
 
 export const About = () => {

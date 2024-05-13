@@ -1,17 +1,11 @@
 import React from 'react';
-import { IoIosCall, IoLogoWhatsapp } from "react-icons/io";
-import { MdEmail } from 'react-icons/md';
 import { FaInstagram } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa";
-import iconData from '../data/mydata.json';
-import { IoLogoInstagram } from "react-icons/io";
+import { FaXTwitter } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
 import { BiLogoGmail } from "react-icons/bi";
-import { LuGithub } from "react-icons/lu";
 import { RiLinkedinFill } from "react-icons/ri";
-import { RiTwitterXFill } from "react-icons/ri";
+
 
 export const SocialMedia = () => {
 

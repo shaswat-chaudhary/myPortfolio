@@ -4,11 +4,7 @@ import resume from '../assets/fullstack.pdf'
 import { FiArrowDownCircle } from 'react-icons/fi';
 import Typewriter from 'typewriter-effect';
 import data from '../data/mydata.json';
-import { IoLogoJavascript } from "react-icons/io";
-import { FaNodeJs, FaReact, FaGithub } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
-import { IoIosCall, IoLogoWhatsapp } from "react-icons/io";
-import { IoCall } from 'react-icons/io5';
+import { IoIosCall } from "react-icons/io";
 
 
 
@@ -86,7 +82,7 @@ export const Header = () => {
 
         <div className='flex flex-col gap-4 sm:w-1/2'>
 
-          <div className='h-40 sm:h-32'>
+          <div className='h-44 sm:h-32'>
             <Typewriter
               options={{
                 strings: [
@@ -123,20 +119,15 @@ export const Header = () => {
 
             <div
               onClick={() => handleCall(number)}
-              className='sm:w-12 sm:h-12 w-10 h-10 ring-1 flex items-center justify-center rounded-full cursor-pointer'>
-              <IoIosCall size={25} />
+              className='sm:w-12 sm:h-12 w-10 h-10 ring-1 flex items-center justify-center rounded-full cursor-pointer bg-blue-400'>
+              <IoIosCall className='call' size={25} />
             </div>
 
           </div>
 
-
-
         </div>
 
       </div>
-
-
-
 
     </div>
   )

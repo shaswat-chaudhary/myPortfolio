@@ -1,7 +1,4 @@
 import React from 'react'
-import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
-import { FaXTwitter, FaGithub } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
 import { SocialMedia } from './SocialMedia';
 
 export const Footer = () => {
