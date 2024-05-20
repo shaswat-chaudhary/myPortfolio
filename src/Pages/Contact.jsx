@@ -31,6 +31,7 @@ export const Contact = () => {
 
       if (res.ok) {
         setIsSubmit('Form send successfully');
+
         setFullName('');
         setEmail('');
         setDescription('');

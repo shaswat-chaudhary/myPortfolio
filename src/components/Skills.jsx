@@ -11,7 +11,7 @@ import { TbBrandVscode } from "react-icons/tb";
 
 export const Skills = () => {
     return (
-        <div className='bg-slate-900 py-6'>
+        <div className='bg-slate-900 py-6' id='skill'>
 
             <div className=''>
                 <div className='items-center flex flex-col gap-2 pb-6 mx-3 text-center'>

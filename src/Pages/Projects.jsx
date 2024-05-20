@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export const Projects = () => {
 
   return (
-    <div>
+    <div id='project'>
 
       <div className='px-5 sm:px-[8vw] mb-5'>
 
@@ -34,7 +34,7 @@ export const Projects = () => {
                 <div className='px-4 py-3 gap-2 sm:gap-4 flex flex-col'>
                   <Link to={item?.link}
                     className='flex flex-row text-center items-center gap-4 text-blue-400 hover:text-gray-300 duration-200'>
-                    <p className='text-xl sm:text-2xl font-medium'>
+                    <p className='text-xl sm:text-2xl font-medium text-start'>
                       {item?.title}
                     </p>
                     {

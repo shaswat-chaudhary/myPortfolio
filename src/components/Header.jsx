@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import profileImg from '../assets/Snapchat-214351935-01.jpeg'
-import resume from '../assets/fullstack.pdf'
+import React, { useEffect, useState } from 'react';
+import profileImg from '../assets/Snapchat-214351935-01.jpeg';
+import resume from '../assets/fullstack.pdf';
 import { FiArrowDownCircle } from 'react-icons/fi';
 import Typewriter from 'typewriter-effect';
 import data from '../data/mydata.json';
@@ -36,6 +36,10 @@ export const Header = () => {
     setStartX(null)
   }
 
+  useEffect(() => {
+   
+  })
+
   const number = +919262575513;
 
   const handleCall = (number) => {
@@ -44,9 +48,9 @@ export const Header = () => {
 
 
   return (
-    <div className='w-full'>
+    <div className='w-full' id='home'>
 
-      <div className='sm:px-[8vw] px-6 flex md:flex-row-reverse flex-col justify-between text-start items-center sm:py-16 py-4 mt-10 sm:mt gap-8 relative'>
+      <div className='sm:px-[8vw] px-6 flex md:flex-row-reverse flex-col justify-between text-start items-center sm:py-16 mb-6 py-4 mt-10 sm:mt gap-8 relative'>
 
         <div className='flex items-center justify-center text-center sm:w-1/2 '>
 
@@ -82,7 +86,7 @@ export const Header = () => {
 
         <div className='flex flex-col gap-4 sm:w-1/2'>
 
-          <div className='h-44 sm:h-32'>
+          <div className='sm:h-32 mb-2'>
             <Typewriter
               options={{
                 strings: [

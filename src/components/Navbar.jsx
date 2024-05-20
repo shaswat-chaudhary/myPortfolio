@@ -4,11 +4,14 @@ import { IoClose } from "react-icons/io5";
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import logo from '../assets/shaswat-logo-2.png'
-
+import { Link as ScrollLink } from 'react-scroll'
 export const Navbar = () => {
 
     const [ismenu, setIsMenu] = useState(false);
     const [navColor, setNavColor] = useState(false);
+    const [active, setActive] = useState();
+
+
     // let menuRef = useRef();
 
     // const handleClickOutside = (e) => {
@@ -24,6 +27,7 @@ export const Navbar = () => {
     //         document.removeEventListener('mousedown', handleClickOutside);
     //     };
     // }, []);
+
 
     const location = useLocation();
 
@@ -55,40 +59,67 @@ export const Navbar = () => {
                             <img src={logo} alt='' className='font-bold brightness-125' />
                         </Link>
 
-                        <div className='hidden sm:flex flex-row text-start gap-20 px-1'>
 
-                            <Link to={'/'}
-                                className={currentPage === '/' ? "active" : "nav"}
-                            >
-                                Home
-                            </Link>
+                        {
+                            currentPage === '/contact' ? (
+                                <></>
+                            ) : (
+                                <div className='hidden sm:flex flex-row text-start gap-20 px-1'>
 
-                            <Link to={''}
-                                className={currentPage === '' ? "active" : "nav"}
-                            >
-                                Project
-                            </Link>
+                                    <ScrollLink
+                                        to='home'
+                                        activeClass="active"
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-100}
+                                        duration={300}
+                                        className='cursor-pointer hover:text-indigo-400 font-medium'>
+                                        Home
+                                    </ScrollLink>
 
-                            <Link to={''}
-                                className={currentPage === '/about' ? "active" : "nav"}
-                            >
-                                About
-                            </Link>
+                                    <ScrollLink
+                                        activeClass="active"
+                                        to='about'
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-60}
+                                        duration={300}
+                                        className=' cursor-pointer hover:text-indigo-400 font-medium'>
+                                        About
+                                    </ScrollLink>
 
-                            <Link to={''}
-                                className={currentPage === '/skill' ? "active" : "nav"}
-                            >
-                                Skills
-                            </Link>
+                                    <ScrollLink
+                                        activeClass="active"
+                                        to='skill'
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-60}
+                                        duration={300}
+                                        className='cursor-pointer hover:text-indigo-400 font-medium'>
+                                        Skills
+                                    </ScrollLink>
 
-                        </div>
+                                    <ScrollLink
+                                        activeClass="active"
+                                        to='project'
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration={300}
+                                        className='cursor-pointer hover:text-indigo-400 font-medium'>
+                                        Projects
+                                    </ScrollLink>
+
+                                </div>
+                            )
+                        }
 
 
                         {
                             currentPage === '/' ? (
                                 <Link to={'/contact'}>
                                     <button
-                                        className="flex sm:px-4 px-3 py-2 my-1 sm:my-0 rounded-lg text-center justify-center items-center grow sm:text-lg text-sm border font-normal border-indigo-200 hover:border-indigo-500 shadow-lg  bg-indigo-100 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-600 hover:text-white duration-500"
+                                        className="flex sm:px-4 px-3 py-2 my-1 sm:my-0 rounded-lg text-center justify-center items-center grow sm:text-lg text-sm border font-normal border-indigo-400 hover:border-indigo-500 shadow-lg  bg-indigo-100 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-600 hover:text-white duration-500"
                                     >
                                         Contact me
                                     </button>
@@ -103,61 +134,8 @@ export const Navbar = () => {
                             )
                         }
 
-                  </div>
+                    </div>
 
-                        {/* {
-                            ismenu ? (
-                                <IoClose
-                                    size={35}
-                                    onClick={handleClick}
-                                    className='hover:rotate-45 transition-all z-30 cursor-pointer text-white' />
-                            ) : (
-
-                                <CgMenuRightAlt
-                                    size={35}
-                                    onClick={handleClick}
-                                    className='md:hidden flex cursor-pointer text-white' />
-                            )
-                        } */}
-                    {/* {
-                        ismenu && (
-
-                            <div className='bg-slate-600 w-3/4 fixed right-2 opacity-100 top-14 rounded-2xl p-4 h-[50vh] flex flex-col justify-between py-5 z-50 text-white font-semibold shadow-lg'>
-
-                                <div className='flex flex-col text-start gap-4 pt-4 text-lg'>
-
-                                    <Link to={'/'}
-                                        className={currentPage === '/' ?
-                                            "bg-slate-800 px-4 py-1 rounded-lg" : "px-4 py-1 rounded-lg hover:bg-slate-500 "}
-                                    >
-                                        Home
-                                    </Link>
-
-                                    <Link to={'/project'}
-                                        className={currentPage === '/project' ? "bg-slate-800 px-4 py-1 rounded-lg" : "px-4 py-1 rounded-lg hover:bg-slate-500"}
-                                    >
-                                        Project
-                                    </Link>
-
-                                    <Link to={'/about'}
-                                        className={currentPage === '/about' ? "bg-slate-800 px-4 py-1 rounded-lg" : "px-4 py-1 rounded-lg hover:bg-slate-500 "}
-                                    >
-                                        About
-                                    </Link>
-
-                                    <Link to={'/contact'}
-                                        className={currentPage === '/contact' ? "bg-slate-800 px-4 py-1 rounded-lg" : "px-4 py-1 rounded-lg hover:bg-slate-500 "}
-                                    >
-                                        Contact
-                                    </Link>
-
-                                </div>
-
-                                <button className=''>Hire me</button>
-
-                            </div>
-                        )
-                    } */}
                 </div>
 
             </div>
