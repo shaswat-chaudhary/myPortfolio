@@ -155,8 +155,8 @@ button:hover {
   position: relative;
   display: block;
   margin: 0;
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.4em;
+  height: 0.4em;
   font-size: 20vmin;
   background-color: #3498db;
   border-radius: 0.5em;
@@ -176,8 +176,8 @@ button:hover {
 .Phone::before {
   top: 0;
   left: 0;
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.4em;
+  height: 0.4em;
   background-color: rgba(#0c0c0c, 0.1);
   border-radius: 100%;
   opacity: 1;
@@ -187,8 +187,8 @@ button:hover {
 .Phone::after {
   top: 0.1em;
   left: 0.1em;
-  width: 0.3em;
-  height: 0.3em;
+  width: 0.2em;
+  height: 0.2em;
   background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTYuNiAxMC44YzEuNCAyLjggMy44IDUuMSA2LjYgNi42bDIuMi0yLjJjLjMtLjMuNy0uNCAxLS4yIDEuMS40IDIuMy42IDMuNi42LjUgMCAxIC40IDEgMVYyMGMwIC41LS41IDEtMSAxLTkuNCAwLTE3LTcuNi0xNy0xNyAwLS42LjQtMSAxLTFoMy41Yy41IDAgMSAuNCAxIDEgMCAxLjIuMiAyLjUuNiAzLjYuMS40IDAgLjctLjIgMWwtMi4zIDIuMnoiIGZpbGw9IiNmZmZmZmYiLz48L3N2Zz4=');
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -196,8 +196,22 @@ button:hover {
   transform: translate3d(0, 0, 0);
 }
 
-.Phone.is-animating {
-  animation: phone-outer 3000ms infinite;
+@media screen and (max-width: 767px){
+  .Phone {
+    width: 0.6em;
+    height: 0.6em;
+  }
+  .Phone::after {
+    width: 0.3em;
+    height: 0.3em;
+    top: 0.15em;
+    left: 0.15em;
+  
+  }
+}
+
+.Phone.is-animating{
+ animation: phone-outer 3000ms infinite;
   
   &::before {
     animation: phone-inner 3000ms infinite;

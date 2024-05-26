@@ -71,7 +71,7 @@ export const Header = () => {
             >
 
 
-              <div className="flip-card-inner bg-red-400">
+              <div className="flip-card-inner">
 
                 <div className="flip-card-front rounded-full">
                   <img className='w-full ring-2 object-cover aspect-square rounded-full'
