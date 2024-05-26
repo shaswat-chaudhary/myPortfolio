@@ -14,9 +14,9 @@ export const Skills = () => {
         <div className='bg-slate-900 py-6' id='skill'>
 
             <div className=''>
-                <div className='items-center flex flex-col gap-2 pb-6 mx-3 text-center'>
+                <div className='items-center flex flex-col gap-2 pb-6 mx-5 text-center'>
                     <p className='bg-gray-800 w-fit px-5 py-0.5 rounded-full font-semibold'>Skills</p>
-                    <p className='text-lg tracking-wider font-'>
+                    <p className='sm:text-lg text-base tracking-wider font-serif font-thin'>
                         He Skills, tools and technologies I am really good at
                     </p>
                 </div>

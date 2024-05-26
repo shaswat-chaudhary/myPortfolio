@@ -5,6 +5,7 @@ import { FiArrowDownCircle } from 'react-icons/fi';
 import Typewriter from 'typewriter-effect';
 import data from '../data/mydata.json';
 import { IoIosCall } from "react-icons/io";
+import { LiaHandPointerSolid } from "react-icons/lia";
 
 
 
@@ -12,6 +13,10 @@ export const Header = () => {
 
   const [isFlipped, setIsFlipped] = useState(false);
   const [startX, setStartX] = useState(null);
+  const [endX, setEndX] = useState(null);
+  const [swipeiIcon, setSwipeIcon] = useState(false);
+
+
 
   const handleTouchStart = (e) => {
     const touch = e.touches[0];
@@ -19,6 +24,8 @@ export const Header = () => {
   }
 
   const handleTouchMove = (e) => {
+    const touch = e.touches[0];
+    setEndX(touch.clientX);
 
   }
 
@@ -35,10 +42,11 @@ export const Header = () => {
 
     setStartX(null)
   }
-
   useEffect(() => {
    
   })
+
+
 
   const number = +919262575513;
 
@@ -63,7 +71,7 @@ export const Header = () => {
             >
 
 
-              <div className="flip-card-inner">
+              <div className="flip-card-inner bg-red-400">
 
                 <div className="flip-card-front rounded-full">
                   <img className='w-full ring-2 object-cover aspect-square rounded-full'
@@ -80,7 +88,13 @@ export const Header = () => {
               </div>
             </div>
 
-            <p className='font-medium py-2 text-lg dark:text-white text-black font-serif'>{'Hey !'}</p>
+            <p className='font-medium py-2 text-lg dark:text-white text-black font-serif'>Hey !</p>
+
+            
+         <div className='path'>
+                  <LiaHandPointerSolid className='hand-icon' />
+                </div>
+
           </div>
         </div>
 
@@ -123,8 +137,7 @@ export const Header = () => {
 
             <div
               onClick={() => handleCall(number)}
-              className='sm:w-12 sm:h-12 w-10 h-10 ring-1 flex items-center justify-center rounded-full cursor-pointer bg-blue-400'>
-              <IoIosCall className='call' size={25} />
+              className='Phone is-animating'>
             </div>
 
           </div>

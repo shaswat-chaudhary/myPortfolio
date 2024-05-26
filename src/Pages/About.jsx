@@ -10,7 +10,7 @@ export const About = () => {
     <div id='about' className='w-full bg-black sm:py-12'>
 
       <div className='py-6 sm:py-0 sm:pb-6 pb-1'>
-      <p className='text-xl font-semibold text-cyan-300 justify-center flex font-serif'>About Me.</p>
+        <p className='text-xl font-semibold text-cyan-300 justify-center flex font-serif'>About Me.</p>
       </div>
 
 
@@ -25,7 +25,10 @@ export const About = () => {
           {/* <p className='text-lg font-medium'>{data?.address}</p> */}
           <p className='text-lg font-medium sm:pr-28 py-1'>{data?.about}</p>
 
-         <SocialMedia/>
+          <div className='flex flex-col'>
+            <p className='font-thin font-sans'>Follow me {":"}</p>
+            <SocialMedia />
+          </div>
 
         </div>
 

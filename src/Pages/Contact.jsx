@@ -5,6 +5,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
 import data from '../data/mydata.json';
+import toast from 'react-hot-toast';
 
 
 export const Contact = () => {
@@ -36,11 +37,11 @@ export const Contact = () => {
         setEmail('');
         setDescription('');
 
+        toast.success('Message Send');
+
         setTimeout(() => {
           setIsSubmit('');
-        }, 2000);
-
-        console.log('send successfully');
+        }, 1000);
 
       }
       else {

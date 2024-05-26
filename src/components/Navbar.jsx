@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { CgMenuRightAlt } from "react-icons/cg";
-import { IoClose } from "react-icons/io5";
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import logo from '../assets/shaswat-logo-2.png'
@@ -10,7 +8,6 @@ export const Navbar = () => {
     const [ismenu, setIsMenu] = useState(false);
     const [navColor, setNavColor] = useState(false);
     const [active, setActive] = useState();
-
 
     // let menuRef = useRef();
 
@@ -27,7 +24,6 @@ export const Navbar = () => {
     //         document.removeEventListener('mousedown', handleClickOutside);
     //     };
     // }, []);
-
 
     const location = useLocation();
 
