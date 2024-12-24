@@ -6,6 +6,7 @@ import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
 import data from '../data/mydata.json';
 import toast from 'react-hot-toast';
+import { GoArrowLeft } from "react-icons/go";
 
 
 export const Contact = () => {
@@ -57,9 +58,15 @@ export const Contact = () => {
 
   return (
     <div>
-      <Navbar />
 
-      <div className='flex justify-between flex-col sm:flex-row sm:gap-10 gap-2 px-5 sm:px-[8vw] pt-8 md:mt-10 pb-4'>
+      <div
+        onClick={() => window.location.href = "/"}
+        className='flex flex-row items-center gap-2 px-3 sm:px-[8vw] pt-4 pb-2'>
+        <GoArrowLeft size={30} />
+        <span className='font-medium text-lg'>Back</span>
+      </div>
+
+      <div className='flex justify-between flex-col sm:flex-row sm:gap-10 gap-2 px-3 sm:px-[8vw] py-4 md:mt-10'>
 
         <form onSubmit={handleSubmit} className=' overflow-hidden grow flex flex-col gap-2 rounded-lg'>
 

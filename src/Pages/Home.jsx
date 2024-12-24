@@ -16,7 +16,6 @@ export const Home = () => {
             <Header />
             <About />
             <Skills />
-            <ChatBox />
             <Projects />
             <Footer />
         </div>

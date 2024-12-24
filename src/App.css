@@ -9,9 +9,10 @@
   filter: drop-shadow(0 0 2em #ffffffaa);
 }
 
-.bright{
+.bright {
   transition: filter 300ms;
 }
+
 .bright:hover {
   filter: drop-shadow(0 0 2em #8dbef3);
 }
@@ -106,23 +107,43 @@ button:hover {
 
 /* FlipCard.css */
 
-
 .flip-card {
   perspective: 1000px;
   width: 250px;
   height: 250px;
+  position: relative;
+  margin: 0 auto;
+  z-index: 30;
+  left: 25px;
+  top: 40px;
 }
 
 .flip-card-inner {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s;
+  transition: transform 1s;
   transform-style: preserve-3d;
 }
 
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
+  animation: flipAnimation 1.2s ease-in-out;
+}
+
+@keyframes flipAnimation {
+  0% {
+    transform: rotateY(0);
+  }
+
+  50% {
+    transform: rotateY(90deg);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+
 }
 
 .flip-card-front,
@@ -196,27 +217,28 @@ button:hover {
   transform: translate3d(0, 0, 0);
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   .Phone {
     width: 0.6em;
     height: 0.6em;
   }
+
   .Phone::after {
     width: 0.3em;
     height: 0.3em;
     top: 0.15em;
     left: 0.15em;
-  
+
   }
 }
 
-.Phone.is-animating{
- animation: phone-outer 3000ms infinite;
-  
+.Phone.is-animating {
+  animation: phone-outer 3000ms infinite;
+
   &::before {
     animation: phone-inner 3000ms infinite;
   }
-  
+
   &::after {
     animation: phone-icon 3000ms infinite;
   }
@@ -229,18 +251,21 @@ button:hover {
       0 0 0 0em rgba(#3498db, 0),
       0em 0.05em 0.1em rgba(#000000, 0.2);
   }
+
   33.3333% {
     transform: translate3d(0, 0, 0) scale(1.1);
     box-shadow:
       0 0 0 0em rgba(#3498db, 0.1),
       0em 0.05em 0.1em rgba(#000000, 0.5);
   }
+
   66.6666% {
     transform: translate3d(0, 0, 0) scale(1);
     box-shadow:
       0 0 0 0.5em rgba(#3498db, 0),
       0em 0.05em 0.1em rgba(#000000, 0.2);
   }
+
   100% {
     transform: translate3d(0, 0, 0) scale(1);
     box-shadow:
@@ -254,14 +279,17 @@ button:hover {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(0);
   }
+
   33.3333% {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(0.9);
   }
+
   66.6666% {
     opacity: 0;
     transform: translate3d(0, 0, 0) scale(0);
   }
+
   100% {
     opacity: 0;
     transform: translate3d(0, 0, 0) scale(0);
@@ -269,31 +297,317 @@ button:hover {
 }
 
 @keyframes phone-icon {
-  0% { transform: translate3d(0em, 0, 0); }
-  2% { transform: translate3d(0.01em, 0, 0); }
-  4% { transform: translate3d(-0.01em, 0, 0); }
-  6% { transform: translate3d(0.01em, 0, 0); }
-  8% { transform: translate3d(-0.01em, 0, 0); }
-  10% { transform: translate3d(0.01em, 0, 0); }
-  12% { transform: translate3d(-0.01em, 0, 0); }
-  14% { transform: translate3d(0.01em, 0, 0); }
-  16% { transform: translate3d(-0.01em, 0, 0); }
-  18% { transform: translate3d(0.01em, 0, 0); }
-  20% { transform: translate3d(-0.01em, 0, 0); }
-  22% { transform: translate3d(0.01em, 0, 0); }
-  24% { transform: translate3d(-0.01em, 0, 0); }
-  26% { transform: translate3d(0.01em, 0, 0); }
-  28% { transform: translate3d(-0.01em, 0, 0); }
-  30% { transform: translate3d(0.01em, 0, 0); }
-  32% { transform: translate3d(-0.01em, 0, 0); }
-  34% { transform: translate3d(0.01em, 0, 0); }
-  36% { transform: translate3d(-0.01em, 0, 0); }
-  38% { transform: translate3d(0.01em, 0, 0); }
-  40% { transform: translate3d(-0.01em, 0, 0); }
-  42% { transform: translate3d(0.01em, 0, 0); }
-  44% { transform: translate3d(-0.01em, 0, 0); }
-  46% { transform: translate3d(0em, 0, 0); }
+  0% {
+    transform: translate3d(0em, 0, 0);
+  }
+
+  2% {
+    transform: translate3d(0.01em, 0, 0);
+  }
+
+  4% {
+    transform: translate3d(-0.01em, 0, 0);
+  }
+
+  6% {
+    transform: translate3d(0.01em, 0, 0);
+  }
+
+  8% {
+    transform: translate3d(-0.01em, 0, 0);
+  }
+
+  10% {
+    transform: translate3d(0.01em, 0, 0);
+  }
+
+  12% {
+    transform: translate3d(-0.01em, 0, 0);
+  }
+
+  14% {
+    transform: translate3d(0.01em, 0, 0);
+  }
+
+  16% {
+    transform: translate3d(-0.01em, 0, 0);
+  }
+
+  18% {
+    transform: translate3d(0.01em, 0, 0);
+  }
+
+  20% {
+    transform: translate3d(-0.01em, 0, 0);
+  }
+
+  22% {
+    transform: translate3d(0.01em, 0, 0);
+  }
+
+  24% {
+    transform: translate3d(-0.01em, 0, 0);
+  }
+
+  26% {
+    transform: translate3d(0.01em, 0, 0);
+  }
+
+  28% {
+    transform: translate3d(-0.01em, 0, 0);
+  }
+
+  30% {
+    transform: translate3d(0.01em, 0, 0);
+  }
+
+  32% {
+    transform: translate3d(-0.01em, 0, 0);
+  }
+
+  34% {
+    transform: translate3d(0.01em, 0, 0);
+  }
+
+  36% {
+    transform: translate3d(-0.01em, 0, 0);
+  }
+
+  38% {
+    transform: translate3d(0.01em, 0, 0);
+  }
+
+  40% {
+    transform: translate3d(-0.01em, 0, 0);
+  }
+
+  42% {
+    transform: translate3d(0.01em, 0, 0);
+  }
+
+  44% {
+    transform: translate3d(-0.01em, 0, 0);
+  }
+
+  46% {
+    transform: translate3d(0em, 0, 0);
+  }
 }
+
+
+
+
+
+.swipe-icon {
+  width: 50px;
+  height: auto;
+  color: white;
+  animation: swipefloating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swipefloating {
+  0% {
+    transform: translateX(-20px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(20px) rotate(40deg);
+  }
+
+  100% {
+    transform: translateX(-20px) rotate(0deg);
+  }
+}
+
+
+
+.project-line {
+  display:block;
+  border-bottom:2px solid wheat;
+  width:0%;
+  text-align:center;
+  animation: line 2s linear forwards;
+}
+
+@keyframes line {
+  from {
+    left: 50%;
+    width: 0%;
+  }
+
+  to {
+    left: 25%;
+    width: 50%;
+  }
+}
+
+
+
+
+
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  z-index: 40;
+}
+
+
+/* Icon styles */
+.icon {
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Large icon style */
+.icon.large {
+  font-size: 50px; /* Large size */
+}
+
+/* Small icon style */
+.icon.small {
+  font-size: 50px; /* Small size */
+  position: fixed;
+  top: -42px; /* Adjust as needed */
+  left: 12px; /* Adjust as needed */
+}
+
+
+
+
+
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  transition: 0.5s;
+}
+
+
+
+
+.small {
+  position: absolute;
+  left: -25px;
+  top: -32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by iconicchandu */ 
+.card {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(240, 15%, 9%);
+  --paragraph: hsl(0, 0%, 83%);
+  --line: hsl(240, 9%, 17%);
+  --primary: hsl(189, 92%, 58%);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(240, 15%, 9%, 1);
+  background-image: radial-gradient(
+      at 88% 40%,
+      hsla(240, 15%, 9%, 1) 0px,
+      transparent 85%
+    ),
+    radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+    radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+    radial-gradient(at 0% 64%, hsl(189, 99%, 26%) 0px, transparent 85%),
+    radial-gradient(at 41% 94%, hsl(189, 97%, 36%) 0px, transparent 85%),
+    radial-gradient(at 100% 99%, hsl(188, 94%, 13%) 0px, transparent 85%);
+
+  border-radius: 1rem;
+  box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+}
+
+.card .card__border {
+  overflow: hidden;
+  pointer-events: none;
+
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background-image: linear-gradient(
+    0deg,
+    hsl(0, 0%, 100%) -50%,
+    hsl(0, 0%, 40%) 100%
+  );
+
+  border-radius: 1rem;
+}
+
+.card .card__border::before {
+  content: "";
+  pointer-events: none;
+
+  position: fixed;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%), rotate(0deg);
+  transform-origin: left;
+
+  width: 200%;
+  height: 10rem;
+  background-image: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsl(189, 100%, 50%) 40%,
+    hsl(189, 100%, 50%) 60%,
+    hsla(0, 0%, 40%, 0) 100%
+  );
+
+  animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
 
 
 

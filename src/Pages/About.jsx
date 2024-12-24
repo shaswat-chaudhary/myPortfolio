@@ -14,16 +14,16 @@ export const About = () => {
       </div>
 
 
-      <div className='flex sm:flex-row flex-col-reverse sm:px-[8vw] px-6 justify-between gap-10 sm:py-12 py-6'>
+      <div className='flex sm:flex-row flex-col-reverse sm:px-[8vw] px-3 justify-between gap-10 sm:py-12 py-6'>
 
 
-        <div className='font-serif flex flex-col gap-7 sm:mr-28 pb-3 sm:pb-0'>
+        <div className='font-sans flex flex-col gap-7 sm:mr-28 pb-3 sm:pb-0'>
 
           <p className='text-3xl font-semibold py-1'>I'm {data?.fullName}</p>
-          <p className='text-lg font-medium py-1'>{data?.profession}</p>
+          <p className='text-lg bg-red-500 py-1'>{data?.profession}</p>
           {/* <p className='text-lg font-medium'>{data?.education}</p> */}
           {/* <p className='text-lg font-medium'>{data?.address}</p> */}
-          <p className='text-lg font-medium sm:pr-28 py-1'>{data?.about}</p>
+          <p className='text-lg tracking-wide font-normal sm:pr-28 py-1'>{data?.about}</p>
 
           <div className='flex flex-col'>
             <p className='font-thin font-sans'>Follow me {":"}</p>
