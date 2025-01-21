@@ -35,7 +35,7 @@ export const Projects = () => {
               <div key={item?.id} item={item}
                 className={`card`}>
 
-                <div class="card__border"></div>
+                <div className="card__border"></div>
 
                 {/* Banner */}
 

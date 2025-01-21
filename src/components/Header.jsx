@@ -114,15 +114,14 @@ export const Header = () => {
       <div className='sm:px-[8vw] px-3 flex md:flex-row-reverse flex-col justify-between text-start items-center sm:py-16 mb-6 py-4 mt-10 sm:mt gap-8 relative'>
 
 
-        <div className='flex items-center justify-center text-center sm:w-1/2 '>
+        <div className='flex items-center justify-center text-center w-full'>
 
-          <div className='sm:w-1/2 w-auto '>
-
+          <div className='sm:w-1/2'>
 
             <header className={`navbar ${isScrolled ? "scrolled" : ""}`}>
-              <div className={`flip-card ${isScrolled ? "small" : "large"}`}>
+              <div className={`flip-card ${isScrolled ? "small" : "large"} `}>
 
-                <div className={`flip-card ${isFlipped ? 'flipped' : ''}  z-40`}
+                <div className={`flip-card ${isFlipped ? 'flipped' : ''}`}
                   onTouchStart={handleTouchStart}
                   onTouchMove={handleTouchMove}
                   onTouchEnd={handleTouchEnd}>
@@ -150,8 +149,7 @@ export const Header = () => {
             </header>
           </div>
 
-
-          <div className='flex flex-col gap-4 sm:w-1/2 mt-60'>
+          <div className='flex flex-col gap-4 sm:w-1/2 mt-60 md:mt-0'>
 
             <div>
               {
@@ -164,7 +162,7 @@ export const Header = () => {
               }
             </div>
 
-            <div className='sm:h-32 mb-2'>
+            <div className=' h-32 md:h-auto mb-2'>
               <Typewriter
                 options={{
                   strings: [
@@ -178,8 +176,7 @@ export const Header = () => {
               />
             </div>
 
-
-            <p className='text-lg font-thin'>
+            <p className='text-lg font-thin text-center md:text-start'>
               {data?.about}
             </p>
 

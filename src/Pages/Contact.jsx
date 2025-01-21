@@ -59,11 +59,13 @@ export const Contact = () => {
   return (
     <div>
 
-      <div
-        onClick={() => window.location.href = "/"}
-        className='flex flex-row items-center gap-2 px-3 sm:px-[8vw] pt-4 pb-2'>
-        <GoArrowLeft size={30} />
-        <span className='font-medium text-lg'>Back</span>
+      <div className='flex flex-1 gap-5 md:gap-14 items-center text-center px-3 md:px-24 pt-2 md:pt-10'>
+        <GoArrowLeft onClick={() => window.location.href = "/"} size={32}
+          style={{
+            cursor: 'pointer',
+            color: '#007bff'
+          }} />
+        <p className='text-lg font-medium'>Contact me</p>
       </div>
 
       <div className='flex justify-between flex-col sm:flex-row sm:gap-10 gap-2 px-3 sm:px-[8vw] py-4 md:mt-10'>
