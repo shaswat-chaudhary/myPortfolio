@@ -15,8 +15,8 @@ export const Header = () => {
   const [endX, setEndX] = useState(null);
   const [swipeiIcon, setSwipeIcon] = useState(true);
   const [iconSize, setIconSize] = useState(250);
-
   const [isScrolled, setIsScrolled] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,6 +75,8 @@ export const Header = () => {
       }
 
       const newSize = Math.max(40, 250 - window.scrollY / 1);
+
+      
       setIconSize(newSize);
     };
 

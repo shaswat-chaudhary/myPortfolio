@@ -1,26 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
-import logo from '../assets/shaswat-logo-2.png'
 import { Link as ScrollLink } from 'react-scroll'
-import { CiMenuFries } from "react-icons/ci";
-import { RxCross1 } from 'react-icons/rx';
-import { SocialMedia } from './SocialMedia'
-import resume from '../assets/fullstack.pdf';
-import { FiArrowDownCircle } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+import { Theme } from './Theme'
 
 
 export const Navbar = () => {
 
-    const [ismenu, setIsMenu] = useState(false);
+    // const [ismenu, setIsMenu] = useState(false);
     const [navColor, setNavColor] = useState(false);
     const [active, setActive] = useState();
 
-    const handleMenuClick = () => {
-        setIsMenu(!ismenu);
-        document.body.style.overflow = !ismenu ? "hidden" : "auto";
+    // const handleMenuClick = () => {
+    //     setIsMenu(!ismenu);
+    //     document.body.style.overflow = !ismenu ? "hidden" : "auto";
 
-    }
+    // }
 
     useEffect(() => {
         return () => {
@@ -62,6 +58,23 @@ export const Navbar = () => {
         window.addEventListener("scroll", scrollHandler);
     })
 
+    const itemVariants = {
+        open: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                delay: 0.2,
+            }
+        },
+        close: {
+            y: 50,
+            opacity: 0,
+            transition: {
+                delay: 0.2,
+            }
+        }
+
+    }
 
 
     return (
@@ -70,25 +83,23 @@ export const Navbar = () => {
 
                 <div className='sm:px-[8vw] px-2 py-0.5'>
 
-
                     <div className='flex text-center items-center w-full z-30 justify-between py-1 sm:py-1 pl-1'>
                         <Link to={'/'} className='flex flex-1 items-center gap-2'>
                             <span className={`${navColor ? "top-0 py-2 ml-12 font-mono text-xl" : "hidden"}`}>Shaswat</span>
                         </Link>
 
-                        <CiMenuFries className='flex md:hidden' onClick={handleMenuClick} size={30} />
+                        {/* <CiMenuFries className='flex md:hidden' onClick={handleMenuClick} size={30} /> */}
 
                         <p className={`${navColor ? 'hidden' :
-                            'absolute top-0 left-0 px-3 py-2.5 text-[16px] font-medium flex md:hidden'}`}>
-                            My Portfolio
+                            'absolute top-0 left-0 px-3 py-2.5 text-lg font-medium flex md:hidden'}`}>
+                            Portfolio
                         </p>
-
 
                         {
                             currentPage === '/contact' ? (
                                 <></>
                             ) : (
-                                <div className='hidden md:flex flex-row text-start gap-24 px-1 py-2'>
+                                <div className='hidden md:flex flex-row text-start gap-20 px-1 py-2'>
 
                                     <ScrollLink
                                         to='home'
@@ -134,15 +145,16 @@ export const Navbar = () => {
                                         Projects
                                     </ScrollLink>
 
-                                    <Link className='ring-1 ring-cyan-300 hover:bg-cyan-400 duration-500 hover:text-black py-1 px-4 text-sm rounded-md' to={'/contact'}>
-                                        Contact
-                                    </Link>
-
                                 </div>
                             )
                         }
 
-                        {
+                        <div className='p-1 ml-16'>
+                            <Theme />
+                        </div>
+
+
+                        {/* {
                             ismenu && (
                                 <div >
 
@@ -168,13 +180,16 @@ export const Navbar = () => {
                                             />
                                         </div>
 
-                                        <div className='flex flex-col w-full items-start px-5 py-2'>
-                                            <ul className='flex-col flex gap-2 text-start text-white font-medium text-lg'>
+                                        <div
+                                            className='flex flex-col w-full items-start px-5 py-2'>
+                                            <motion.ul
+                                            variants={itemVariants}
+                                            className='flex-col flex gap-2 text-start text-white font-medium text-lg'>
                                                 <li> <Link to={'/'}>Home</Link> </li>
                                                 <li> <Link to={'/contact'}>Contact</Link> </li>
                                                 <li> <Link to={''}>Help</Link> </li>
                                                 <li> <Link to={'/about'}>About</Link> </li>
-                                            </ul>
+                                            </motion.ul>
                                         </div>
 
                                         <div className='py-4 px-5'>
@@ -208,7 +223,7 @@ export const Navbar = () => {
                                     </div>
                                 </div>
                             )
-                        }
+                        } */}
 
                     </div>
 

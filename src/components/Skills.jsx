@@ -8,10 +8,11 @@ import { SiTailwindcss } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { TbBrandVscode } from "react-icons/tb";
+import { motion } from 'framer-motion';
 
 export const Skills = () => {
     return (
-        <div className='bg-black py-6' id='skill'>
+        <div className='py-6' id='skill'>
 
             <div className=''>
                 <div className='items-center flex flex-col gap-2 pb-6 mx-3 text-center'>
@@ -21,11 +22,12 @@ export const Skills = () => {
                     </p>
                 </div>
 
-                <div className='sm:px-[8vw] px-3 grid grid-cols-2 gap-4 md:gap-16 sm:grid-cols-3 md:grid-cols-4 items-center justify-between text-center text-white sm:pb-9 pb-1'>
+                <div 
+                className='sm:px-[8vw] px-3 grid grid-cols-2 gap-4 md:gap-16 sm:grid-cols-3 md:grid-cols-4 items-center justify-between text-center text-white sm:pb-9 pb-1'>
                     <div className='card py-8 gap-2 rounded-xl shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
-                        
+
                         <h1 className='text-yellow-300 flex justify-center'>
-                            <IoLogoJavascript className='bright'/>
+                            <IoLogoJavascript className='bright' />
                         </h1>
                         <p> JavaScript</p>
                     </div>
@@ -37,51 +39,50 @@ export const Skills = () => {
                     </div>
                     <div className=' card py-8 gap-2 rounded-xl shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className=' text-green-500 flex justify-center'>
-                            <FaNodeJs className='bright'/>
+                            <FaNodeJs className='bright' />
                         </h1>
                         <p>Node.js</p>
                     </div>
                     <div className=' card py-8 gap-2 rounded-xl shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className='flex justify-center'>
-                            <SiExpress className='bright text-white'/>
+                            <SiExpress className='bright text-white' />
                         </h1>
                         <p>Express.js</p>
                     </div>
                     <div className=' card py-8 gap-2 rounded-xl shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className=' text-green-800 flex justify-center'>
-                            <SiMongodb className='bright'/>
+                            <SiMongodb className='bright' />
                         </h1>
                         <p>MongoDB</p>
                     </div>
                     <div className='card py-8 gap-2 rounded-xl shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className=' text-blue-500 flex justify-center'>
-                            <SiTailwindcss className='bright'/>
+                            <SiTailwindcss className='bright' />
                         </h1>
                         <p>Tailwind</p>
                     </div>
                     <div className='card py-8 gap-2 rounded-xl shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className='flex justify-center'>
-                            <FaFigma className='bright text-white'/>
+                            <FaFigma className='bright text-white' />
                         </h1>
                         <p>Figma</p>
                     </div>
                     <div className=' card py-8 gap-2 rounded-xl shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
                         <h1 className='flex justify-center'>
-                            <FaGithubSquare className='bright text-white'/>
+                            <FaGithubSquare className='bright text-white' />
 
                         </h1>
                         <p>Github</p>
                     </div>
                     <div className='card py-8 gap-2 rounded-xl shadow-lg text-center flex flex-col justify-center hover:scale-105 duration-200 transition-all'>
-                        
+
                         <h1 className='flex justify-center'>
-                            <TbBrandVscode className='bright text-blue-500'/>
+                            <TbBrandVscode className='bright text-blue-500' />
                         </h1>
                         <p>VS Code</p>
                     </div>
 
                 </div>
-
 
             </div>
         </div>

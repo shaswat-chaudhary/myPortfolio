@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Navbar } from '../components/Navbar';
 import { Header } from '../components/Header';
 import { Skills } from '../components/Skills';
-import { Footer } from '../components/Footer';
-import { ChatBox } from '../components/ChatBox';
 import { About } from './About';
 import { Projects } from './Projects';
+import { Contact } from './Contact';
 
 
 export const Home = () => {
@@ -17,7 +16,7 @@ export const Home = () => {
             <About />
             <Skills />
             <Projects />
-            <Footer />
+            <Contact />
         </div>
     )
 }

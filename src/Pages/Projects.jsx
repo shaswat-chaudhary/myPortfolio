@@ -9,9 +9,23 @@ import { motion, useInView } from 'framer-motion';
 export const Projects = () => {
 
   const [isVisible, setIsVisible] = useState(false);
+  const [lineAnimation, setLineAnimation] = useState(false);
 
   useEffect(() => {
+
     setIsVisible(true);
+
+    const handleScroll = () => {
+      if (window.scrollY < -70) {
+        setLineAnimation(true);
+      }
+      window.addEventListener("scroll", handleScroll);
+
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
   }, [])
 
 
@@ -25,14 +39,22 @@ export const Projects = () => {
           <p className='text-xl font-semibold text-center py-1'>
             My Project
           </p>
-          <div className='project-line absolute'></div>
+          <motion.div >
+            {
+              lineAnimation && (
+                <div className='project-line absolute'></div>
+              )
+            }
+          </motion.div>
         </div>
 
-
-        <div className='grid sm:grid-cols-2 grid-cols-1 sm:gap-x-24 sm:gap-y-10 gap-5'>
+        <div
+          className='grid sm:grid-cols-2 grid-cols-1 sm:gap-x-24 sm:gap-y-10 gap-5'>
           {
             projectData.map((item) => (
-              <div key={item?.id} item={item}
+              <motion.div
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+                key={item?.id} item={item}
                 className={`card`}>
 
                 <div className="card__border"></div>
@@ -40,7 +62,7 @@ export const Projects = () => {
                 {/* Banner */}
 
                 <div className='w-full p-3'>
-                  <img className='w-full aspect-video object-cover rounded-2xl'
+                  <img className='w-full aspect-video object-cover rounded-xl'
                     src={item?.image}
                     alt='' />
                 </div>
@@ -74,7 +96,7 @@ export const Projects = () => {
                 </div>
 
 
-              </div>
+              </motion.div>
             ))
           }
 

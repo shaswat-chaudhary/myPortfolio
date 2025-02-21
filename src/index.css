@@ -8,14 +8,79 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+
+body {
+  background-color: rgba(255, 255, 255, 0.968);
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #1d1c20;
+  color: white;
+}
+
+@layer base {
+  :root {
+    --color-bg: 227 227 227;
+    --color-primary: 47 164 184;
+    --color-secondary:255 255 255;
+    --color-ascent1: 10 20 30;
+    --color-ascent2: 89 91 100;
+    --color-blue: 4 128 252;
+    --color-white: 255 255 255;
+    --color-red: 255 5 145;
+    --color-hovercolor: 0 248 255;
+    --color-shadowcolor: 77 208 255;
+    --color-bg2: 255 255 255;
+    --color-bg3: 255 255 255;
+    
+
+  }
+  /* //15 23 42  21 30 49*/
+  [data-theme="dark-mode"] {
+     --color-bg: 38 48 61;
+     --color-primary: 10 20 30;
+    --color-secondary: 47 45 48;
+    --color-ascent1: 255 255 255;
+    --color-ascent2: 164 161 162;
+    --color-blue: 4 128 252;
+    --color-white: 255 255 255;
+    --color-red: 255 5 145;
+    --color-hovercolor: 31 31 31;
+    --color-shadowcolor: 39 47 126;
+    --color-bg2: 10 20 30;
+--color-bg3: 21 30 49;
+
+
+  }
+}
+
+.light-icon {
+ cursor: pointer;
+ transition: filter 300ms;
+ animation: move 5s ease;
+}
+
+@keyframes move {
+  from {
+transform: rotate(0deg);
+  }
+  to {
+text-replace: rotate(45deg);
+  }
+}
+
 
 /* a {
   font-weight: 500;
@@ -88,15 +153,18 @@ button:focus-visible {
 .path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 0;
+
   &.circle {
     -webkit-animation: dash .9s ease-in-out;
     animation: dash .9s ease-in-out;
   }
+
   &.line {
     stroke-dashoffset: 1000;
     -webkit-animation: dash .9s .35s ease-in-out forwards;
     animation: dash .9s .35s ease-in-out forwards;
   }
+
   &.check {
     stroke-dashoffset: -100;
     -webkit-animation: dash-check .9s .35s ease-in-out forwards;
@@ -121,6 +189,7 @@ button:focus-visible {
   0% {
     stroke-dashoffset: 1000;
   }
+
   100% {
     stroke-dashoffset: 0;
   }
@@ -130,6 +199,7 @@ button:focus-visible {
   0% {
     stroke-dashoffset: 1000;
   }
+
   100% {
     stroke-dashoffset: 0;
   }
@@ -139,6 +209,7 @@ button:focus-visible {
   0% {
     stroke-dashoffset: -100;
   }
+
   100% {
     stroke-dashoffset: 900;
   }
@@ -148,6 +219,7 @@ button:focus-visible {
   0% {
     stroke-dashoffset: -100;
   }
+
   100% {
     stroke-dashoffset: 900;
   }

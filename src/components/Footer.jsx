@@ -1,6 +1,6 @@
 import React from 'react'
 import { SocialMedia } from './SocialMedia';
-import { motion, useInView, AnimatePresence  } from 'framer-motion';
+import { motion, useInView,   } from 'framer-motion';
 
 export const Footer = ({isVisible}) => {
 
@@ -17,7 +17,7 @@ export const Footer = ({isVisible}) => {
       <SocialMedia />
 
       <p className='font-normal text-sm sm:text-lg text-center text-[#808080]'>
-        2024 Portfolio. All rights reserved
+      {`© ${new Date().getFullYear()} Portfolio by Shaswat. `}All rights reserved
       </p>
 
     </div>

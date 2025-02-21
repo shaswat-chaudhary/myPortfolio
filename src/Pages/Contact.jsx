@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer';
 import { CiLocationOn } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
 import data from '../data/mydata.json';
 import toast from 'react-hot-toast';
-import { GoArrowLeft } from "react-icons/go";
 
 
 export const Contact = () => {
@@ -59,14 +57,11 @@ export const Contact = () => {
   return (
     <div>
 
-      <div className='flex flex-1 gap-5 md:gap-14 items-center text-center px-3 md:px-24 pt-2 md:pt-10'>
-        <GoArrowLeft onClick={() => window.location.href = "/"} size={32}
-          style={{
-            cursor: 'pointer',
-            color: '#007bff'
-          }} />
-        <p className='text-lg font-medium'>Contact me</p>
+      <div className='flex flex-1 gap-5 md:gap-14 items-center justify-center text-center px-3 md:px-24 pt-2 md:pt-10'>
+        <p className='text-xl tracking-wider font-medium'>Get In Touch</p>
       </div>
+
+      <div className='h-[1px] my-0.5 bg-gray-500 w-1/2 mx-auto'></div>
 
       <div className='flex justify-between flex-col sm:flex-row sm:gap-10 gap-2 px-3 sm:px-[8vw] py-4 md:mt-10'>
 
@@ -123,7 +118,7 @@ export const Contact = () => {
 
         </form>
 
-        <div className='bg-slate-950 h-[1px]'></div>
+        <div className='bg-gray-500 h-[1px]'></div>
 
         <div className='flex flex-col grow gap-3 sm:gap-5'>
           <p className='font-semibold text-2xl py-4 font-serif text-cyan-300'>Contact me</p>

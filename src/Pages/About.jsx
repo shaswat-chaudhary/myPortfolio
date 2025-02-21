@@ -2,12 +2,14 @@ import React from 'react';
 import data from '../data/mydata.json';
 import image from '../assets/IMG20230525222423-01.jpeg';
 import { SocialMedia } from '../components/SocialMedia';
+import { Link } from 'react-router-dom';
+import { IoMdPhotos } from 'react-icons/io';
 
 export const About = () => {
 
 
   return (
-    <div id='about' className='w-full bg-black sm:py-12'>
+    <div id='about' className='w-full sm:py-12'>
 
       <div className='py-6 sm:py-0 sm:pb-6 pb-1'>
         <p className='text-xl font-semibold text-cyan-300 justify-center flex font-serif'>About Me.</p>
@@ -28,11 +30,19 @@ export const About = () => {
           <div className='flex flex-col'>
             <p className='font-thin font-sans'>Follow me {":"}</p>
             <SocialMedia />
+
+            <Link className='hover:text-cyan-300 bg-blue-700 ring-1 text-white ring-white w-10 h-10 p-1.5 rounded-full text-center items-center justify-center flex relative md:hidden'
+              onClick={() => window.location.href = '/auth'}
+            >
+              <IoMdPhotos size={26} />
+              <span className='absolute top-11 left-0'>Gallery</span>
+            </Link>
           </div>
 
         </div>
 
         <div className='flex justify-center'>
+
 
           <div className='relative'>
 
